@@ -22,7 +22,7 @@ namespace Used_Cars_Lab
             inventory.Add(new UsedCar("Dodge", "Neon", 2004, 500, 168000));
             inventory.Add(new UsedCar("Honda", "Accord", 2001, 1500, 250000));
 
-            int index = 1;
+            int index = 0;
             foreach (Car car in inventory)
             {
                 Console.WriteLine(index + ": " + car);
@@ -34,13 +34,14 @@ namespace Used_Cars_Lab
             string input = Console.ReadLine();
             int pick = int.Parse(input);
 
+
+            Console.WriteLine(inventory[pick]);
             inventory.RemoveAt(pick);
-            Console.WriteLine(inventory[pick-1]);
             Console.WriteLine("");
             Console.WriteLine("Wonderful! Our financing department will be in touch with you soon!");
             Console.WriteLine("Have a great day!");
 
-            index = 1;
+            index = 0;
             foreach (Car car in inventory)
             {
                 Console.WriteLine(index + ": " + car);
